@@ -1,0 +1,19 @@
+{
+  "name": "mrozon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "opusscript": "^0.0.7",
+    "simple-youtube-api": "^5.2.1",
+    "yt-search": "^2.5.1",
+    "ytdl-core": "^4.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MateuszNaumiuk",
+  "license": "ISC"
+}
