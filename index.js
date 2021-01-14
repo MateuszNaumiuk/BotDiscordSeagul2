@@ -38,7 +38,7 @@ client.on("message", async message => {
     return;
   }
   else {
-    message.channel.send("co ty pierdolisz?");
+    message.channel.send("?");
   }
 });
 
@@ -48,10 +48,10 @@ async function execute(message, serverQueue) {
 
   const voiceChannel = message.member.voice.channel;
   if (!voiceChannel)
-    return message.channel.send("Wbij na kanal frajerze!");
+    return message.channel.send("Wejdz na kanal");
   const permissions = voiceChannel.permissionsFor(message.client.user);
   if (!permissions.has("CONNECT") || !permissions.has("SPEAK")) {
-    return message.channel.send("dawaj permisje");
+    return message.channel.send("Nie mam permisji");
   }
 
    /* Pobranie url do bota */
@@ -120,7 +120,7 @@ function skip(message, serverQueue) {
   if (!message.member.voice.channel)
     return message.channel.send("Musisz byc na kanale zeby stopowac");
   if (!serverQueue)
-    return message.channel.send("niemoge sie zatrzymac!");
+    return message.channel.send("Nie moge stopowac.");
   serverQueue.connection.dispatcher.end();
 }
 
@@ -129,7 +129,7 @@ function stop(message, serverQueue) {
   if (!message.member.voice.channel)
     return message.channel.send("Musisz byc na kanale zeby stopowac");
   if (!serverQueue)
-    return message.channel.send("niemoge sie zatrzymac!");
+    return message.channel.send("Nie moge stopowac.");
   serverQueue.songs = [];
   serverQueue.connection.dispatcher.end();
 }
